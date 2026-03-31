@@ -1,0 +1,83 @@
+<svg width="800" height="900" viewBox="0 0 800 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="s-purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="s-pro-badge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="900" fill="#fafafa"/>
+
+  <rect x="0" y="0" width="800" height="60" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="20" y="14" width="100" height="32" rx="8" fill="#f5f3fa"/>
+  <text x="70" y="35" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="13" font-weight="600">← 돌아가기</text>
+  <text x="400" y="38" text-anchor="middle" fill="#1a1a2e" font-family="system-ui" font-size="16" font-weight="700">⚙️ 설정</text>
+
+  <!-- Card 1: 계정 정보 -->
+  <rect x="140" y="88" width="520" height="180" rx="16" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="172" y="120" fill="#1a1a2e" font-family="system-ui" font-size="14" font-weight="700">👤 계정 정보</text>
+  <circle cx="192" cy="168" r="28" fill="url(#s-purple)"/>
+  <text x="192" y="176" text-anchor="middle" fill="white" font-family="system-ui" font-size="20" font-weight="700">U</text>
+  <text x="232" y="152" fill="#6b6b80" font-family="system-ui" font-size="11">이름</text>
+  <text x="232" y="168" fill="#1a1a2e" font-family="system-ui" font-size="13" font-weight="600">사용자</text>
+  <text x="400" y="152" fill="#6b6b80" font-family="system-ui" font-size="11">이메일</text>
+  <text x="400" y="168" fill="#1a1a2e" font-family="system-ui" font-size="13" font-weight="600">user@email.com</text>
+  <text x="232" y="200" fill="#6b6b80" font-family="system-ui" font-size="11">로그인 방식</text>
+  <rect x="232" y="208" width="60" height="22" rx="11" fill="#4285f4" fill-opacity="0.1" stroke="#4285f4" stroke-opacity="0.3" stroke-width="0.5"/>
+  <text x="262" y="223" text-anchor="middle" fill="#4285f4" font-family="system-ui" font-size="9" font-weight="600">Google</text>
+  <text x="400" y="200" fill="#6b6b80" font-family="system-ui" font-size="11">가입일</text>
+  <text x="400" y="218" fill="#1a1a2e" font-family="system-ui" font-size="13">2026-03-15</text>
+  <line x1="160" y1="244" x2="640" y2="244" stroke="#f0ecfa" stroke-width="1"/>
+  <text x="172" y="260" fill="#7c3aed" font-family="system-ui" font-size="11" font-weight="600">프로필 수정</text>
+
+  <!-- Card 2: 구독 · 결제 -->
+  <rect x="140" y="288" width="520" height="200" rx="16" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="172" y="320" fill="#1a1a2e" font-family="system-ui" font-size="14" font-weight="700">💳 구독 · 결제</text>
+  <text x="172" y="352" fill="#6b6b80" font-family="system-ui" font-size="11">현재 플랜</text>
+  <rect x="172" y="360" width="200" height="56" rx="12" fill="#f5f3fa" stroke="#d4c5f9" stroke-width="1"/>
+  <rect x="184" y="372" width="44" height="20" rx="10" fill="#e8e5f0"/>
+  <text x="206" y="386" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10" font-weight="700">Free</text>
+  <text x="236" y="386" fill="#6b6b80" font-family="system-ui" font-size="11">무료 플랜</text>
+  <text x="184" y="406" fill="#a098c0" font-family="system-ui" font-size="10">월 10회 생성 · 5가지 유형</text>
+  <rect x="392" y="360" width="248" height="56" rx="12" fill="url(#s-purple)"/>
+  <text x="416" y="382" fill="white" font-family="system-ui" font-size="12" font-weight="700">⚡ Pro 업그레이드</text>
+  <text x="416" y="400" fill="white" font-opacity="0.8" font-family="system-ui" font-size="10">무제한 생성 · 전체 유형 · ₩29,900/월</text>
+  <line x1="160" y1="436" x2="640" y2="436" stroke="#f0ecfa" stroke-width="1"/>
+  <text x="172" y="460" fill="#6b6b80" font-family="system-ui" font-size="11">결제 이력</text>
+  <text x="172" y="478" fill="#a098c0" font-family="system-ui" font-size="11">결제 내역이 없습니다</text>
+
+  <!-- Card 3: 사용량 현황 -->
+  <rect x="140" y="508" width="520" height="166" rx="16" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="172" y="540" fill="#1a1a2e" font-family="system-ui" font-size="14" font-weight="700">📊 사용량 현황</text>
+  <text x="172" y="572" fill="#6b6b80" font-family="system-ui" font-size="11">문제 생성</text>
+  <text x="620" y="572" text-anchor="end" fill="#1a1a2e" font-family="system-ui" font-size="11" font-weight="600">7 / 10회</text>
+  <rect x="172" y="580" width="448" height="8" rx="4" fill="#f0ecfa"/>
+  <rect x="172" y="580" width="314" height="8" rx="4" fill="url(#s-purple)"/>
+  <text x="172" y="612" fill="#6b6b80" font-family="system-ui" font-size="11">VLM 지문 분석</text>
+  <text x="620" y="612" text-anchor="end" fill="#1a1a2e" font-family="system-ui" font-size="11" font-weight="600">3 / 10회</text>
+  <rect x="172" y="620" width="448" height="8" rx="4" fill="#f0ecfa"/>
+  <rect x="172" y="620" width="134" height="8" rx="4" fill="#0ea5e9"/>
+  <text x="172" y="656" fill="#a098c0" font-family="system-ui" font-size="10">다음 갱신: 2026-04-01 (2일 후)</text>
+
+  <!-- Card 4: 화면 설정 -->
+  <rect x="140" y="694" width="520" height="100" rx="16" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="172" y="726" fill="#1a1a2e" font-family="system-ui" font-size="14" font-weight="700">🎨 화면 설정</text>
+  <text x="172" y="758" fill="#6b6b80" font-family="system-ui" font-size="11">테마</text>
+  <rect x="220" y="744" width="120" height="28" rx="14" fill="#f0ecfa"/>
+  <rect x="222" y="746" width="58" height="24" rx="12" fill="url(#s-purple)"/>
+  <text x="251" y="763" text-anchor="middle" fill="white" font-family="system-ui" font-size="10" font-weight="600">☀️ 라이트</text>
+  <text x="310" y="763" text-anchor="middle" fill="#8b7fb0" font-family="system-ui" font-size="10">🌙 다크</text>
+  <text x="420" y="758" fill="#6b6b80" font-family="system-ui" font-size="11">언어</text>
+  <rect x="460" y="744" width="80" height="28" rx="8" fill="#f5f3fa" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="500" y="763" text-anchor="middle" fill="#1a1a2e" font-family="system-ui" font-size="11">한국어 ▾</text>
+
+  <!-- Logout -->
+  <rect x="140" y="820" width="520" height="48" rx="12" fill="white" stroke="#ef4444" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="400" y="849" text-anchor="middle" fill="#ef4444" font-family="system-ui" font-size="13" font-weight="600">로그아웃</text>
+
+  <text x="400" y="888" text-anchor="middle" fill="#c0b8d8" font-family="system-ui" font-size="10">데스크톱/모바일 동일한 풀페이지 — ← 돌아가기로 대시보드 복귀</text>
+</svg>

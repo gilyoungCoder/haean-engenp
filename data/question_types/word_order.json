@@ -1,0 +1,87 @@
+{
+  "type_id": "word_order",
+  "type_name_ko": "단어배열",
+  "type_name_en": "Word Order Arrangement",
+  "description": "문장의 한국어 해석을 보고, 제시된 보기 단어들을 올바른 순서로 배열하여 영어 문장을 완성하는 워크북 문제. 지문의 모든 문장을 순서대로 전수 출제하는 것이 기본이다.",
+  "difficulty_range": [
+    1,
+    4
+  ],
+  "category": "workbook",
+  "instruction_template": "주어진 단어를 모두 사용하여 해석에 맞게 영어 문장을 완성하시오. (단어 형태 변경 불가)",
+  "output_schema": {
+    "question_number": "number",
+    "difficulty": "number (1-5)",
+    "instruction": "string",
+    "korean_translation": "string — the Korean translation shown to the student",
+    "word_bank": [
+      "string — individual words/phrases, shuffled"
+    ],
+    "answer": "string — the complete correct English sentence",
+    "answer_variants": [
+      "string — alternative acceptable arrangements, if any"
+    ],
+    "explanation": "string (Korean: key grammar structure, word order rule, or phrase collocation that determines the arrangement)"
+  },
+  "generation_rules": [
+    "지문의 모든 문장을 순서대로 전수 출제한다. 문장 번호는 01, 02, 03... 순서를 유지한다.",
+    "각 문항에는 한국어 해석(korean_translation)과 보기 단어(word_bank)를 제공한다.",
+    "word_bank는 원문 문장의 단어를 순서를 섞어 제시한다. 단어 형태(시제, 격, 수)는 원문 그대로 유지한다.",
+    "구두점(마침표, 쉼표)은 word_bank에 포함하지 않고 정답 문장에만 표기한다.",
+    "긴 문장(12단어 이상)은 앞부분/뒷부분으로 분할하여 2문항으로 출제할 수 있다.",
+    "explanation은 한국어로 작성하며, 핵심 어순 포인트(수식어 위치, 도치, 분사구문 위치 등)를 설명한다.",
+    "난이도 1: 기본 SVO 어순. 난이도 2: 수식어구 포함. 난이도 3: 분사구문·도치·비교구문. 난이도 4: 복잡한 종속절 포함."
+  ],
+  "examples": [
+    {
+      "instruction": "주어진 단어를 모두 사용하여 해석에 맞게 영어 문장을 완성하시오.",
+      "korean_translation": "무의식적인 먹기는 당신이 산만하고 얼마나 많은 음식을 먹고 있는지에 주의를 기울이지 않을 때 발생한다.",
+      "word_bank": [
+        "Mindless",
+        "eating",
+        "happens",
+        "when",
+        "you",
+        "are",
+        "distracted",
+        "and",
+        "do",
+        "not",
+        "pay",
+        "attention",
+        "to",
+        "how",
+        "much",
+        "food",
+        "you",
+        "are",
+        "eating"
+      ],
+      "answer": "Mindless eating happens when you are distracted and do not pay attention to how much food you are eating.",
+      "answer_variants": [],
+      "explanation": "접속사 'when'이 이끄는 부사절 구조. 'pay attention to + 의문사절(how much food you are eating)' 형태로 의문사절이 전치사 to의 목적어 역할. 등위접속사 'and'로 두 절 병렬."
+    },
+    {
+      "instruction": "주어진 단어를 모두 사용하여 해석에 맞게 영어 문장을 완성하시오.",
+      "korean_translation": "그것은 그냥 속이 불편하거나 죄책감과 수치심을 느끼는 것으로만 이어질 것이다.",
+      "word_bank": [
+        "It",
+        "will",
+        "only",
+        "lead",
+        "to",
+        "an",
+        "upset",
+        "stomach",
+        "or",
+        "feeling",
+        "guilty",
+        "and",
+        "ashamed"
+      ],
+      "answer": "It will only lead to an upset stomach or feeling guilty and ashamed.",
+      "answer_variants": [],
+      "explanation": "'lead to + 명사/동명사' 구조. 'an upset stomach'(명사구)과 'feeling guilty and ashamed'(동명사구)가 등위접속사 or로 병렬 연결. 부사 'only'는 동사 'lead' 앞에 위치."
+    }
+  ]
+}

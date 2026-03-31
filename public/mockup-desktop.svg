@@ -1,0 +1,205 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purple-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="sidebar-bg" x1="0" y1="0" x2="0" y2="700">
+      <stop offset="0%" stop-color="#f8f7fc"/>
+      <stop offset="100%" stop-color="#f3f1fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- ===== ProjectHistory (collapsed) ===== -->
+  <rect x="0" y="0" width="44" height="700" fill="#f3f1fa" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="10" y="16" width="24" height="24" rx="6" fill="#7c3aed" fill-opacity="0.1"/>
+  <text x="22" y="33" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="14">☰</text>
+  <rect x="10" y="60" width="24" height="24" rx="6" fill="#e8e5f0"/>
+  <text x="22" y="77" text-anchor="middle" fill="#8b7fb0" font-family="system-ui" font-size="11">📄</text>
+  <rect x="10" y="92" width="24" height="24" rx="6" fill="#e8e5f0"/>
+  <text x="22" y="109" text-anchor="middle" fill="#8b7fb0" font-family="system-ui" font-size="11">📄</text>
+  <rect x="10" y="124" width="24" height="24" rx="6" fill="#e8e5f0"/>
+  <text x="22" y="141" text-anchor="middle" fill="#8b7fb0" font-family="system-ui" font-size="11">📄</text>
+  <text x="22" y="690" text-anchor="middle" fill="#a098c0" font-family="system-ui" font-size="8" font-weight="500">40px</text>
+
+  <!-- ===== LeftSidebar (280px) ===== -->
+  <rect x="44" y="0" width="280" height="700" fill="url(#sidebar-bg)" stroke="#e5e2f0" stroke-width="1"/>
+
+  <text x="62" y="32" fill="#1a1a2e" font-family="system-ui" font-size="13" font-weight="700">📤 파일 업로드</text>
+  <rect x="62" y="46" width="244" height="80" rx="12" fill="white" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="184" y="80" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="12" font-weight="600">+ PDF, JPG, PNG 드래그</text>
+  <text x="184" y="100" text-anchor="middle" fill="#a0a0b0" font-family="system-ui" font-size="10">또는 클릭하여 선택 (최대 10MB)</text>
+
+  <rect x="62" y="136" width="244" height="36" rx="8" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="78" y="158" fill="#1a1a2e" font-family="system-ui" font-size="11">📄 EBS_수능특강_5과.pdf</text>
+  <text x="288" y="158" text-anchor="end" fill="#ef4444" font-family="system-ui" font-size="10">✕</text>
+
+  <text x="62" y="200" fill="#1a1a2e" font-family="system-ui" font-size="13" font-weight="700">🧬 학교 DNA 분석 (선택)</text>
+  <rect x="62" y="214" width="244" height="32" rx="8" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="184" y="234" text-anchor="middle" fill="#a0a0b0" font-family="system-ui" font-size="10">기출 시험지 업로드</text>
+
+  <text x="62" y="276" fill="#1a1a2e" font-family="system-ui" font-size="13" font-weight="700">⚡ 생성 모드</text>
+  <rect x="62" y="290" width="244" height="32" rx="8" fill="#f0ecfa"/>
+  <rect x="64" y="292" width="80" height="28" rx="6" fill="url(#purple-grad)"/>
+  <text x="104" y="310" text-anchor="middle" fill="white" font-family="system-ui" font-size="10" font-weight="700">변형문제</text>
+  <text x="184" y="310" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10" font-weight="600">워크북</text>
+  <text x="265" y="310" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10" font-weight="600">동형모의</text>
+
+  <text x="62" y="348" fill="#6b6b80" font-family="system-ui" font-size="11">문제 유형</text>
+  <rect x="62" y="356" width="42" height="22" rx="11" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-opacity="0.3" stroke-width="0.5"/>
+  <text x="83" y="371" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="9" font-weight="600">어법</text>
+  <rect x="108" y="356" width="42" height="22" rx="11" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-opacity="0.3" stroke-width="0.5"/>
+  <text x="129" y="371" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="9" font-weight="600">어휘</text>
+  <rect x="154" y="356" width="56" height="22" rx="11" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
+  <text x="182" y="371" text-anchor="middle" fill="#a0a0b0" font-family="system-ui" font-size="9">빈칸추론</text>
+  <rect x="214" y="356" width="56" height="22" rx="11" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
+  <text x="242" y="371" text-anchor="middle" fill="#a0a0b0" font-family="system-ui" font-size="9">순서배열</text>
+
+  <rect x="62" y="384" width="42" height="22" rx="11" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
+  <text x="83" y="399" text-anchor="middle" fill="#a0a0b0" font-family="system-ui" font-size="9">삽입</text>
+  <rect x="108" y="384" width="56" height="22" rx="11" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
+  <text x="136" y="399" text-anchor="middle" fill="#a0a0b0" font-family="system-ui" font-size="9">주제요약</text>
+
+  <text x="62" y="430" fill="#6b6b80" font-family="system-ui" font-size="11">난이도</text>
+  <rect x="62" y="440" width="200" height="4" rx="2" fill="#e5e2f0"/>
+  <rect x="62" y="440" width="120" height="4" rx="2" fill="url(#purple-grad)"/>
+  <circle cx="182" cy="442" r="8" fill="url(#purple-grad)"/>
+  <text x="182" y="446" text-anchor="middle" fill="white" font-family="system-ui" font-size="7" font-weight="700">3</text>
+  <text x="270" y="446" fill="#6b6b80" font-family="system-ui" font-size="10">Lv.3</text>
+
+  <text x="62" y="478" fill="#6b6b80" font-family="system-ui" font-size="11">문제 수</text>
+  <rect x="62" y="488" width="200" height="4" rx="2" fill="#e5e2f0"/>
+  <rect x="62" y="488" width="80" height="4" rx="2" fill="url(#purple-grad)"/>
+  <circle cx="142" cy="490" r="8" fill="url(#purple-grad)"/>
+  <text x="142" y="494" text-anchor="middle" fill="white" font-family="system-ui" font-size="7" font-weight="700">5</text>
+  <text x="270" y="494" fill="#6b6b80" font-family="system-ui" font-size="10">5문항</text>
+
+  <rect x="62" y="520" width="244" height="44" rx="12" fill="url(#purple-grad)"/>
+  <text x="184" y="547" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">⚡ 문제 생성하기</text>
+
+  <!-- User Profile Bar (bottom of LeftSidebar) -->
+  <rect x="44" y="644" width="280" height="56" fill="#eee9f8" stroke="#e5e2f0" stroke-width="1"/>
+  <circle cx="76" cy="672" r="16" fill="url(#purple-grad)"/>
+  <text x="76" y="677" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">U</text>
+  <text x="100" y="667" fill="#1a1a2e" font-family="system-ui" font-size="11" font-weight="600">user@email.com</text>
+  <text x="100" y="682" fill="#8b7fb0" font-family="system-ui" font-size="9">Free 플랜 · 7/10회 사용</text>
+  <rect x="286" y="660" width="28" height="28" rx="8" fill="#7c3aed" fill-opacity="0.1"/>
+  <text x="300" y="679" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="14">⚙️</text>
+
+  <text x="184" y="630" text-anchor="middle" fill="#a098c0" font-family="system-ui" font-size="8" font-weight="500">LeftSidebar — 280px 고정</text>
+
+  <!-- ===== MainContent (flex-1) ===== -->
+  <rect x="324" y="0" width="576" height="700" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+
+  <rect x="324" y="0" width="576" height="44" fill="#fafafa" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="340" y="10" width="80" height="28" rx="8" fill="#7c3aed" fill-opacity="0.1"/>
+  <text x="380" y="28" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="11" font-weight="600">지문 원문</text>
+  <text x="460" y="28" text-anchor="middle" fill="#6b6b80" font-family="system-ui" font-size="11">타겟 지문</text>
+  <text x="550" y="28" text-anchor="middle" fill="#6b6b80" font-family="system-ui" font-size="11">변형 문제</text>
+  <rect x="590" y="14" width="20" height="20" rx="6" fill="#7c3aed" fill-opacity="0.15"/>
+  <text x="600" y="28" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10" font-weight="700">3</text>
+
+  <rect x="344" y="60" width="90" height="22" rx="11" fill="#7c3aed" fill-opacity="0.08" stroke="#7c3aed" stroke-opacity="0.2" stroke-width="0.5"/>
+  <text x="389" y="75" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="9" font-weight="600">EBS 수능특강</text>
+  <rect x="440" y="60" width="44" height="22" rx="11" fill="#f0f0f5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <text x="462" y="75" text-anchor="middle" fill="#6b6b80" font-family="system-ui" font-size="9">영어</text>
+  <rect x="490" y="60" width="44" height="22" rx="11" fill="#f0f0f5" stroke="#e0e0e0" stroke-width="0.5"/>
+  <text x="512" y="75" text-anchor="middle" fill="#6b6b80" font-family="system-ui" font-size="9">2024</text>
+
+  <text x="344" y="108" fill="#1a1a2e" font-family="system-ui" font-size="16" font-weight="700">Cultural Intelligence in a Globalized World</text>
+
+  <rect x="344" y="124" width="536" height="8" rx="4" fill="#1a1a2e" opacity="0.08"/>
+  <rect x="344" y="140" width="480" height="8" rx="4" fill="#1a1a2e" opacity="0.06"/>
+  <rect x="344" y="156" width="520" height="8" rx="4" fill="#1a1a2e" opacity="0.08"/>
+  <rect x="344" y="172" width="400" height="8" rx="4" fill="#1a1a2e" opacity="0.06"/>
+  <rect x="344" y="188" width="510" height="8" rx="4" fill="#1a1a2e" opacity="0.08"/>
+  <rect x="344" y="204" width="460" height="8" rx="4" fill="#1a1a2e" opacity="0.06"/>
+
+  <!-- Question Card 1 -->
+  <rect x="344" y="236" width="536" height="88" rx="12" fill="#fafafa" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="358" y="250" width="36" height="36" rx="10" fill="url(#purple-grad)"/>
+  <text x="376" y="274" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="800">1</text>
+  <rect x="404" y="250" width="36" height="20" rx="10" fill="#0ea5e9" fill-opacity="0.1" stroke="#0ea5e9" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="422" y="264" text-anchor="middle" fill="#0ea5e9" font-family="system-ui" font-size="9" font-weight="600">어법</text>
+  <rect x="446" y="250" width="36" height="20" rx="10" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="464" y="264" text-anchor="middle" fill="#f59e0b" font-family="system-ui" font-size="9" font-weight="600">Lv.3</text>
+  <rect x="404" y="280" width="400" height="7" rx="3.5" fill="#1a1a2e" opacity="0.06"/>
+  <rect x="404" y="295" width="320" height="7" rx="3.5" fill="#1a1a2e" opacity="0.04"/>
+
+  <!-- Question Card 2 -->
+  <rect x="344" y="334" width="536" height="88" rx="12" fill="#fafafa" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="358" y="348" width="36" height="36" rx="10" fill="url(#purple-grad)"/>
+  <text x="376" y="372" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="800">2</text>
+  <rect x="404" y="348" width="56" height="20" rx="10" fill="#14b8a6" fill-opacity="0.1" stroke="#14b8a6" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="432" y="362" text-anchor="middle" fill="#14b8a6" font-family="system-ui" font-size="9" font-weight="600">빈칸추론</text>
+  <rect x="466" y="348" width="36" height="20" rx="10" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="484" y="362" text-anchor="middle" fill="#f43f5e" font-family="system-ui" font-size="9" font-weight="600">Lv.4</text>
+  <rect x="404" y="378" width="440" height="7" rx="3.5" fill="#1a1a2e" opacity="0.06"/>
+  <rect x="404" y="393" width="360" height="7" rx="3.5" fill="#1a1a2e" opacity="0.04"/>
+
+  <!-- Question Card 3 -->
+  <rect x="344" y="432" width="536" height="88" rx="12" fill="#fafafa" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="358" y="446" width="36" height="36" rx="10" fill="url(#purple-grad)"/>
+  <text x="376" y="470" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="800">3</text>
+  <rect x="404" y="446" width="36" height="20" rx="10" fill="#a855f7" fill-opacity="0.1" stroke="#a855f7" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="422" y="460" text-anchor="middle" fill="#a855f7" font-family="system-ui" font-size="9" font-weight="600">어휘</text>
+  <rect x="446" y="446" width="36" height="20" rx="10" fill="#22c55e" fill-opacity="0.1" stroke="#22c55e" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="464" y="460" text-anchor="middle" fill="#22c55e" font-family="system-ui" font-size="9" font-weight="600">Lv.2</text>
+  <rect x="404" y="476" width="420" height="7" rx="3.5" fill="#1a1a2e" opacity="0.06"/>
+  <rect x="404" y="491" width="340" height="7" rx="3.5" fill="#1a1a2e" opacity="0.04"/>
+
+  <!-- Bottom toolbar -->
+  <rect x="324" y="650" width="576" height="50" fill="#fafafa" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="360" y="680" fill="#6b6b80" font-family="system-ui" font-size="11">총 3문항 · 평균 Lv.3</text>
+  <rect x="760" y="660" width="120" height="32" rx="8" fill="url(#purple-grad)"/>
+  <text x="820" y="680" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="700">📥 DOCX 내보내기</text>
+
+  <text x="612" y="690" text-anchor="middle" fill="#a098c0" font-family="system-ui" font-size="8" font-weight="500">MainContent — flex-1 (나머지 전부)</text>
+
+  <!-- ===== AIChatSidebar (300px) ===== -->
+  <rect x="900" y="0" width="300" height="700" fill="#fafafa" stroke="#e5e2f0" stroke-width="1"/>
+
+  <rect x="900" y="0" width="300" height="44" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="920" y="28" fill="#1a1a2e" font-family="system-ui" font-size="13" font-weight="700">💬 AI 채팅</text>
+  <text x="1180" y="28" text-anchor="end" fill="#a0a0b0" font-family="system-ui" font-size="16">✕</text>
+
+  <rect x="916" y="56" width="130" height="32" rx="8" fill="#7c3aed" fill-opacity="0.06" stroke="#7c3aed" stroke-opacity="0.15" stroke-width="0.5"/>
+  <text x="981" y="76" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10">난이도 올려줘</text>
+  <rect x="1052" y="56" width="130" height="32" rx="8" fill="#7c3aed" fill-opacity="0.06" stroke="#7c3aed" stroke-opacity="0.15" stroke-width="0.5"/>
+  <text x="1117" y="76" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10">문제 추가해줘</text>
+  <rect x="916" y="94" width="130" height="32" rx="8" fill="#7c3aed" fill-opacity="0.06" stroke="#7c3aed" stroke-opacity="0.15" stroke-width="0.5"/>
+  <text x="981" y="114" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10">해설 자세히</text>
+  <rect x="1052" y="94" width="130" height="32" rx="8" fill="#7c3aed" fill-opacity="0.06" stroke="#7c3aed" stroke-opacity="0.15" stroke-width="0.5"/>
+  <text x="1117" y="114" text-anchor="middle" fill="#7c3aed" font-family="system-ui" font-size="10">다른 유형으로</text>
+
+  <rect x="980" y="150" width="196" height="40" rx="12" fill="url(#purple-grad)"/>
+  <text x="1078" y="174" text-anchor="middle" fill="white" font-family="system-ui" font-size="11">1번 문제 난이도 올려줘</text>
+
+  <rect x="916" y="200" width="240" height="68" rx="12" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <text x="928" y="220" fill="#1a1a2e" font-family="system-ui" font-size="11">1번 문제의 난이도를 Lv.4로</text>
+  <text x="928" y="236" fill="#1a1a2e" font-family="system-ui" font-size="11">올렸습니다. 문법 포인트를</text>
+  <text x="928" y="252" fill="#1a1a2e" font-family="system-ui" font-size="11">분사구문으로 변경했어요.</text>
+
+  <rect x="1016" y="284" width="160" height="40" rx="12" fill="url(#purple-grad)"/>
+  <text x="1096" y="308" text-anchor="middle" fill="white" font-family="system-ui" font-size="11">어휘 문제 2개 추가</text>
+
+  <rect x="916" y="340" width="80" height="32" rx="12" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <circle cx="936" cy="356" r="4" fill="#7c3aed" opacity="0.4"/>
+  <circle cx="950" cy="356" r="4" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="964" cy="356" r="4" fill="#7c3aed" opacity="0.8"/>
+
+  <rect x="900" y="650" width="300" height="50" fill="white" stroke="#e5e2f0" stroke-width="1"/>
+  <rect x="916" y="660" width="230" height="32" rx="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="932" y="680" fill="#a0a0b0" font-family="system-ui" font-size="11">메시지를 입력하세요...</text>
+  <rect x="1152" y="660" width="32" height="32" rx="10" fill="url(#purple-grad)"/>
+  <text x="1168" y="681" text-anchor="middle" fill="white" font-family="system-ui" font-size="14">↑</text>
+
+  <text x="1050" y="690" text-anchor="middle" fill="#a098c0" font-family="system-ui" font-size="8" font-weight="500">AIChatSidebar — 300px 고정</text>
+
+  <line x1="44" y1="700" x2="324" y2="700" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="324" y1="700" x2="900" y2="700" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="900" y1="700" x2="1200" y2="700" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.3"/>
+</svg>

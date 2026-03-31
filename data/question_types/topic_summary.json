@@ -1,0 +1,134 @@
+{
+  "type_id": "topic_summary",
+  "type_name_ko": "주제/요지/제목",
+  "type_name_en": "Topic / Main Idea / Title",
+  "description": "지문 전체를 읽고 주제(topic), 요지(main idea/주장), 제목(title), 또는 요약문 완성(summary)으로 가장 적절한 것을 5개의 선택지 중에서 고르는 문제. 글의 핵심 논지를 종합적으로 파악하는 능력을 평가한다. 세부 문항 유형은 주제, 요지, 제목, 요약문 완성으로 구분된다.",
+  "difficulty_range": [2, 4],
+  "category": "variation",
+  "instruction_template_topic": "다음 글의 주제로 가장 적절한 것은?",
+  "instruction_template_main_idea": "다음 글의 요지로 가장 적절한 것은?",
+  "instruction_template_title": "다음 글의 제목으로 가장 적절한 것은?",
+  "instruction_template_summary": "다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?",
+  "output_schema": {
+    "question_number": "number",
+    "difficulty": "number (1-5)",
+    "subtype": "string — one of: 'topic' | 'main_idea' | 'title' | 'summary'",
+    "instruction": "string",
+    "passage_with_markers": "string (complete passage, 150–200 words, no inline markers)",
+    "choices": [
+      "① string",
+      "② string",
+      "③ string",
+      "④ string",
+      "⑤ string"
+    ],
+    "answer": "string (e.g. '②')",
+    "explanation": "string (Korean explanation: the central claim of the passage and why the correct choice best captures it; why distractors miss the point)",
+    "test_point": "string (what macro-reading skill is tested, in Korean)"
+  },
+  "generation_rules": [
+    "지문은 하나의 일관된 논지를 가진 150~200 단어의 설득적·논설적 단락으로 작성한다. 두 가지 이상의 주제가 경쟁하는 글은 피한다.",
+    "주제(topic) 문제: 선택지는 짧은 명사구(예: 'the role of failure in learning') 형태로, 글 전체가 다루는 소재+관점을 담는다. 지나치게 넓거나 좁은 선택지를 오답으로 활용한다.",
+    "요지(main idea) 문제: 선택지는 완전한 문장 형태로, 필자의 핵심 주장을 진술한다. 요지는 글의 주제문(topic sentence) 또는 결론부와 일치해야 한다.",
+    "제목(title) 문제: 선택지는 신문 헤드라인 또는 책 제목 형식의 짧고 인상적인 명사구나 어구로 작성한다. 정답 제목은 핵심 논지를 함축적으로 표현해야 한다.",
+    "오답 선택지 설계 원칙: (1) 지문의 세부 내용 한 가지만을 가리키는 선택지(너무 좁음), (2) 지문 내용을 포함하지만 훨씬 더 넓은 범주를 가리키는 선택지(너무 넓음), (3) 지문의 핵심어는 포함하나 논지가 반대인 선택지, (4) 지문에 언급되지 않은 내용을 담은 선택지.",
+    "정답은 글 전체의 논리적 흐름을 모두 포괄해야 하며, 한두 문장만 읽고 고를 수 있는 선택지는 피한다.",
+    "선택지 영어 표현의 수준은 지문과 동일한 수준으로 유지한다. 선택지가 지문 내 특정 문장을 그대로 인용하지 않도록 한다.",
+    "explanation은 한국어로 작성하며, 글의 핵심 논지를 요약하고 정답이 그 논지를 가장 잘 포착하는 이유와 각 오답의 문제점을 서술한다.",
+    "요약문 완성(summary) 문제: 지문의 핵심 내용을 한 문장으로 요약하되, (A)와 (B) 두 빈칸을 두어 핵심 수식어/행위(A)와 결론/교훈(B)을 학생이 채우도록 한다. 선택지는 '① (A) word — (B) word' 형식 5개. (A) 오답은 지문 소재어로 혼동을 유도하고, (B) 오답은 중간 과정의 감정/사건으로 최종 결론과 혼동을 유도한다.",
+    "subtype은 반드시 'topic', 'main_idea', 'title', 'summary' 중 하나로 지정하고, instruction은 subtype에 맞는 template를 사용한다.",
+    "test_point는 선택지 간 변별의 핵심 기준(예: '지나치게 좁은 선택지 vs. 글 전체를 포괄하는 선택지 구별')을 서술한다."
+  ],
+  "examples": [
+    {
+      "instruction": "다음 글의 제목으로 가장 적절한 것은?",
+      "subtype": "title",
+      "passage_with_markers": "Failure is often viewed as something to be avoided at all costs, yet research in developmental psychology consistently reveals that experiencing and recovering from failure is essential to building genuine competence. When children are shielded from all setbacks, they miss the opportunity to develop resilience — the capacity to adapt and persist in the face of difficulty. Studies show that students who encounter manageable challenges and learn to work through them develop stronger problem-solving skills and higher levels of intrinsic motivation than those who are constantly protected from failure. Educators and parents, therefore, should resist the temptation to remove every obstacle from a child's path. A certain degree of struggle is not a sign of inadequate support; it is a necessary ingredient for growth.",
+      "choices": [
+        "① How to Prevent Children from Failing at School",
+        "② The Hidden Value of Failure in Building Resilience",
+        "③ Why Intrinsic Motivation Declines in Modern Education",
+        "④ Parenting Styles and Their Effects on Academic Performance",
+        "⑤ The Relationship Between Competence and Natural Talent"
+      ],
+      "answer": "②",
+      "explanation": "글의 핵심 논지는 실패를 경험하고 극복하는 것이 진정한 능력과 회복 탄력성 형성에 필수적이라는 것이다. ② 'The Hidden Value of Failure in Building Resilience'는 이 논지를 가장 함축적으로 표현한다. ①은 글의 주장과 반대(실패 방지)이고, ③④⑤는 지문이 직접 다루지 않는 세부 주제이거나 너무 좁은 내용이다.",
+      "test_point": "글 전체 논지를 포괄하는 제목 선택 — 지나치게 좁거나 반대 방향의 선택지 변별"
+    },
+    {
+      "instruction": "다음 글의 목적으로 가장 적절한 것은?",
+      "subtype": "main_idea",
+      "passage_with_markers": "These days, many teenagers spend too much time staring at smartphones and computer screens. Some even stay up late playing computer games and watching videos. This is fine as long as these devices enrich your life. However, excessive reliance on technology can exhaust your mental energy. To make it easier to focus on important things, set aside your devices for some time. For example, it's a good idea to finish surfing the Internet, watching videos, and sending instant messages during the week and turn everything off on the weekends. You can use your newly found time to connect with friends, family, and yourself. You might be surprised at how much more productive you can be when not glued to a screen.",
+      "choices": [
+        "① To analyze teenagers' technology usage patterns.",
+        "② To establish legal regulations for the use of electronic devices.",
+        "③ To introduce the latest features of electronic devices.",
+        "④ To explain various ways to enrich one's life.",
+        "⑤ To recommend balancing technology use for improved well-being."
+      ],
+      "answer": "⑤",
+      "explanation": "이 글은 십대들의 과도한 기술 사용이 정신 에너지를 소모할 수 있음을 지적하며, 중요한 일에 집중하고 생산성을 높이기 위해 기기 사용 시간을 제한하고 균형 잡힌 기술 사용을 권고하는 내용이다. 따라서 정답은 ⑤이다.",
+      "test_point": "글의 전체적 목적 파악 — 분석/규제/소개와 권고의 구분"
+    },
+    {
+      "instruction": "다음 글의 제목으로 가장 적절한 것은?",
+      "subtype": "title",
+      "passage_with_markers": "Making time for exercise with a busy schedule is not easy. However, it's important to exercise regularly because it offers countless benefits. You can have more new experiences and complete more challenging tasks with increased energy. The benefits are not limited to physical strength; exercise also boosts confidence and fosters a positive attitude. Whether you like lifting weights at the gym, jogging through the park, or riding a bicycle, establishing and sticking to an exercise routine will strengthen your body, mind, and spirit.",
+      "choices": [
+        "① Fitting Exercise into a Busy Schedule",
+        "② The Physical Benefits of Regular Exercise",
+        "③ Choosing the Right Exercise for You",
+        "④ Strengthening Body, Mind, and Spirit with a Regular Exercise Routine",
+        "⑤ How Exercise Boosts Self-Confidence"
+      ],
+      "answer": "④",
+      "explanation": "이 글은 바쁜 일정 속에서도 규칙적인 운동을 하는 것이 중요하며, 운동이 신체적 강화를 넘어 자신감 향상, 긍정적 태도 함양 등 몸, 마음, 정신을 모두 강화하는 이점을 제공한다고 설명한다. ④가 이 논지를 가장 포괄적으로 담고 있다. ①은 일정 관리에만 집중하고, ②⑤는 이점의 일부만 다루어 너무 좁으며, ③은 운동 선택에 관한 것으로 지문의 핵심이 아니다.",
+      "test_point": "글 전체의 다층적 이점(신체·정신·영혼)을 포괄하는 제목 선택"
+    },
+    {
+      "instruction": "다음 글의 주제로 가장 적절한 것은?",
+      "subtype": "topic",
+      "passage_with_markers": "Who you are now says a lot about who you'll be in the future. However, as the years pass, some of your current interests and perspectives may fade. You could try sending a note to your future self. Writing a letter to your future self will allow you to take a moment to reflect on where you are, where you're heading, and what's important to you right now. Furthermore, when you're older, this letter can serve as a reminder of the person you used to be. It might even give you a new sense of strength to live a more meaningful life.",
+      "choices": [
+        "① How to overcome challenges during high school",
+        "② The benefits of writing a letter to your future self.",
+        "③ The importance of setting long-term life goals",
+        "④ Ways to preserve memories from your youth",
+        "⑤ The positive effects of journaling on personal growth"
+      ],
+      "answer": "②",
+      "explanation": "현재의 모습이 미래를 말해주지만 시간이 지나면 현재의 관심사와 관점은 희미해질 수 있으므로, 미래의 자신에게 편지를 써보는 것이 좋다는 내용이다. 편지 쓰기의 이점(자기 성찰, 과거의 자신 상기, 의미 있는 삶의 힘)을 설명한다. 따라서 글의 주제로 가장 적절한 것은 ②이다.",
+      "test_point": "글 전체 논지(편지 쓰기의 이점)를 포괄하는 주제 선택 — 유사 주제(기억 보존, 일기 효과)와의 변별"
+    },
+    {
+      "instruction": "다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?",
+      "subtype": "summary",
+      "passage_with_markers": "Exhausted from a full day of labor, a boy habitually climbed his hilltop to gaze at a faraway dwelling whose windows seemed to gleam with gold and diamond in the evening light. Setting out one day to reach the house, he discovered upon arrival that its windows were merely ordinary glass. A girl who lived there led him to a high vantage point, from which the golden windows appeared once more — but this time on a distant hill he recognized as his own home.",
+      "choices": [
+        "① (A) distant — (B) appreciation",
+        "② (A) distant — (B) disappointment",
+        "③ (A) glittering — (B) appreciation",
+        "④ (A) glittering — (B) disappointment",
+        "⑤ (A) familiar — (B) recognition"
+      ],
+      "answer": "①",
+      "explanation": "(A) distant — 소년이 찾아간 집은 '멀리 있는(distant)' 언덕 위의 집이다. 소년의 여정은 'a distant house'를 향한 탐색이었으므로, distant가 (A)에 적절하다. glittering은 집의 특성 중 하나이나 quest의 목적어로 어울리지 않는다.\n(B) appreciation — 소년은 황금 창문이 자신의 집 것임을 깨닫고 돌아와 자신의 삶에 대한 '감사/인식(appreciation)'에 이르렀다. disappointment는 여정 중간의 감정이지 최종 결론이 아니다.",
+      "test_point": "요약문 (A)(B) 완성 — (A)=핵심 수식어 vs 지문 소재어 구분, (B)=최종 결론 감정 vs 중간 과정 감정 구분"
+    },
+    {
+      "instruction": "다음 글에서 필자가 주장하는 바로 가장 적절한 것은?",
+      "subtype": "main_idea",
+      "passage_with_markers": "We often find ourselves gazing at the lives of others, convinced that beauty, richness, and fulfillment exist somewhere beyond our reach. Like a boy who traveled far in search of golden windows only to discover that they had always adorned his own home, we may spend years chasing what we believe to be extraordinary, overlooking the quiet treasures that surround us every day.",
+      "choices": [
+        "① 장거리 여행은 삶의 목표를 새롭게 설정하는 데 도움이 된다.",
+        "② 타인의 삶을 관찰함으로써 자신의 부족함을 깨달을 수 있다.",
+        "③ 부모의 조언을 따르는 것이 성장의 가장 빠른 길이다.",
+        "④ 일상 속 가까운 것들에서 진정한 삶의 가치를 발견해야 한다.",
+        "⑤ 낯선 환경에서의 경험이 감사하는 마음을 길러 준다."
+      ],
+      "answer": "④",
+      "explanation": "④ 일상 속 가까운 것들에서 진정한 삶의 가치를 발견해야 한다. — 필자는 먼 곳을 동경하다 결국 자신의 집 창문이 황금빛임을 깨닫는 소년의 이야기를 통해, 우리가 이미 가진 것이 바로 찾던 보물임을 역설한다.\n① — 여행의 목표 재설정에 대한 내용은 언급되지 않는다.\n② — 타인의 삶 관찰을 통한 자기 부족함 인식은 글의 요지와 다르다.\n③ — 부모의 조언은 서사의 도입 장치일 뿐 핵심 주장이 아니다.\n⑤ — 낯선 환경이 감사함을 길러준다는 내용은 일부 유사하나, 핵심은 '자신의 일상'으로 시선을 돌리는 것이다.",
+      "test_point": "필자 주장 파악(한국어 선지) — 배경·소재를 가리키는 부분 사실 오답 vs 핵심 메시지 추상화 정답 구별"
+    }
+  ]
+}

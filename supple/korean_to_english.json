@@ -1,0 +1,83 @@
+{
+  "type_id": "korean_to_english",
+  "type_name_ko": "영작",
+  "type_name_en": "Korean to English Writing",
+  "category": "workbook",
+  "description": "지문 문장의 한국어 해석을 보고 영어 문장을 쓰는 워크북 문제. 해석 쓰기(translation_writing)의 역방향으로, 지문의 모든 문장을 순서대로 전수 출제하는 것이 기본이다. 정확한 어법과 표현을 재현하는 능력을 평가한다.",
+  "difficulty_range": [2, 5],
+  "instruction_template": "다음 우리말을 영어로 쓰시오. (단, 지문의 표현을 활용할 것)",
+  "output_schema": {
+    "question_number": "number",
+    "difficulty": "number (1-5)",
+    "instruction": "string",
+    "korean_sentence": "string — the Korean sentence to be translated into English",
+    "conditions": ["string — any constraints, e.g. '주어진 단어로 시작할 것', '10단어 이내로 쓸 것'"],
+    "answer": "string — the model English sentence (matching the original passage)",
+    "answer_variants": ["string — alternative acceptable English sentences"],
+    "scoring_rubric": "string (Korean partial-credit rubric)",
+    "key_expressions": [
+      {
+        "korean": "string — the key Korean phrase",
+        "english": "string — the expected English rendering"
+      }
+    ],
+    "explanation": "string (Korean: notes on grammar structure, required expressions, or common mistakes)"
+  },
+  "generation_rules": [
+    "지문의 모든 문장을 순서대로 전수 출제한다. 문장 번호는 01, 02, 03... 순서를 유지한다.",
+    "answer는 원문 지문의 표현과 일치하는 것을 기본으로 하되, 의미가 동일한 다른 표현은 answer_variants에 포함한다.",
+    "conditions는 출제 의도에 따라 '주어진 단어로 시작할 것', '괄호 안의 단어를 활용할 것', '단어 수 제한' 등을 명시한다.",
+    "scoring_rubric은 내신 서술형 기준으로 작성하며, 문법 오류·철자 오류·어휘 선택에 대한 부분 점수 기준을 포함한다.",
+    "key_expressions는 영작 시 학생이 놓치기 쉬운 핵심 표현 2~4개를 선정한다.",
+    "explanation은 한국어로 작성하며, 흔한 오류 패턴(직역으로 인한 어색한 표현, 구문 오류 등)을 중점 설명한다.",
+    "난이도 2: 기본 SVO 문장. 난이도 3: 수식어구·준동사 포함. 난이도 4: 분사구문·비교 구문. 난이도 5: 도치·가정법."
+  ],
+  "examples": [
+    {
+      "instruction": "다음 우리말을 영어로 쓰시오. (단, 지문의 표현을 활용할 것)",
+      "korean_sentence": "따라서, 무의식적인 식사자가 되는 것보다는, 당신은 의식적인 식습관을 길러야 한다.",
+      "conditions": ["'rather than'을 사용할 것"],
+      "answer": "So, rather than being a mindless eater, you should cultivate mindful eating habits.",
+      "answer_variants": [
+        "Therefore, rather than being a mindless eater, you should develop mindful eating habits."
+      ],
+      "scoring_rubric": "3점 만점: rather than being(1점) + mindless eater(1점) + cultivate mindful eating habits(1점). 철자 오류 1개당 -0.5점(동일 단어 중복 오류는 1회만 감점).",
+      "key_expressions": [
+        {
+          "korean": "~이 되는 것보다는",
+          "english": "rather than being ~"
+        },
+        {
+          "korean": "기르다 (습관을)",
+          "english": "cultivate"
+        },
+        {
+          "korean": "의식적인 식습관",
+          "english": "mindful eating habits"
+        }
+      ],
+      "explanation": "'rather than' 뒤에는 동명사(being)를 사용한다. '기르다'를 'grow' 또는 'make'로 쓰는 오류가 흔하므로 'cultivate' 또는 'develop'을 사용한다. 'mindful'을 'careful'이나 'conscious'로 쓰면 부분 점수 처리."
+    },
+    {
+      "instruction": "다음 우리말을 영어로 쓰시오.",
+      "korean_sentence": "더 작은 한 입씩 먹고 음식을 더 오랫동안 씹어라.",
+      "conditions": [],
+      "answer": "Take smaller bites and chew your food for a longer time.",
+      "answer_variants": [
+        "Take smaller bites and chew your food longer."
+      ],
+      "scoring_rubric": "2점 만점: Take smaller bites(1점) + chew your food for a longer time(1점). 동사원형으로 시작하지 않으면 -0.5점.",
+      "key_expressions": [
+        {
+          "korean": "한 입씩 먹다",
+          "english": "take bites"
+        },
+        {
+          "korean": "더 오랫동안",
+          "english": "for a longer time"
+        }
+      ],
+      "explanation": "명령문이므로 동사원형(Take)으로 시작한다. '씹다'를 'bite' 또는 'eat'으로 쓰지 않도록 'chew'를 사용한다. 'for a longer time'과 'longer' 모두 허용."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "type_id": "grammar_error_correction",
+  "type_name_ko": "어법 오류 수정",
+  "type_name_en": "Grammar Error Correction",
+  "category": "workbook",
+  "description": "지문 내 밑줄 친 (A)~(C) 등의 어법 포인트 중 문법적으로 틀린 것을 찾아 올바른 형태로 고쳐 쓰는 워크북 서술형 문제. 의도적으로 삽입된 오류를 식별하고 교정하는 능력을 평가한다.",
+  "difficulty_range": [2, 5],
+  "instruction_template": "다음 글의 밑줄 친 (A)~(C) 중 어법상 틀린 것을 모두 찾아 바르게 고치시오.",
+  "output_schema": {
+    "question_number": "number",
+    "difficulty": "number (1-5)",
+    "instruction": "string",
+    "passage_with_markers": "string — full passage with error markers (A)(B)(C) as inline labels before underlined segments",
+    "answer_table": [
+      {
+        "label": "string — e.g. '(A)'",
+        "wrong_form": "string — the incorrect form as written in the passage",
+        "correct_form": "string — the corrected form",
+        "is_error": "boolean — false if the item is intentionally correct (a distractor)"
+      }
+    ],
+    "explanation": "string (Korean: grammar rule for each marker, why wrong → why correct)",
+    "test_point": "string (Korean: the grammar categories tested, e.g. '동명사 주어 / 수동태 오류 / to부정사 구문')"
+  },
+  "generation_rules": [
+    "지문 전체를 포함하며, 어법 오류 포인트를 (A)(B)(C) 등의 레이블로 표시하고 해당 구간에 밑줄을 삽입한다.",
+    "각 문항당 (A)(B)(C) 3개 포인트를 기본으로 제시하며, 그 중 2~3개가 실제 오류이고 0~1개는 정상 항목(오답 함정)으로 구성한다.",
+    "오류 유형은 서로 다른 문법 범주에서 선정한다: to부정사↔동명사, 수 일치, 재귀대명사, 품사 혼동, 능동↔수동, 도치구문, 관계사, 지각동사 목적보어 등.",
+    "주요 출제 오류 유형: 동명사 주어(Leave → Leaving), 수동태 오류(exposing → exposed), 비교급 중복(more great → greater), to부정사 구문(feeling → to feel).",
+    "정상 항목이 포함된 경우 explanation에서 '(B)는 문법적으로 올바른 표현'임을 명시한다.",
+    "answer_table은 label/wrong_form/correct_form/is_error 4필드를 모두 포함한다.",
+    "explanation은 한국어로 작성하며, 각 레이블별로 적용 문법 규칙 → 오류 원인 → 올바른 형태를 순서대로 설명한다.",
+    "test_point는 이 문항에서 테스트되는 문법 범주를 콤마로 나열한다.",
+    "난이도 2~3: 단순 수동태/준동사 오류. 난이도 4: 복합 구문 내 오류. 난이도 5: 도치·가정법 등 고급 구문."
+  ],
+  "examples": [
+    {
+      "instruction": "다음 글의 밑줄 친 (A)~(C) 중 어법상 틀린 것을 모두 찾아 바르게 고치시오.",
+      "passage_with_markers": "Mindless eating happens when you are distracted and do not pay attention to how much food you are eating. So, rather than (A) be a mindless eater, you should cultivate mindful eating habits. Eat only when you can focus on eating. The human body is (B) designed to crave sweets. Eating smaller portions, such as a fun-size candy bar, can slow down your sugar cravings. (C) Leave food out of sight is one of the most effective strategies.",
+      "answer_table": [
+        {
+          "label": "(A)",
+          "wrong_form": "be",
+          "correct_form": "being",
+          "is_error": true
+        },
+        {
+          "label": "(B)",
+          "wrong_form": "designed",
+          "correct_form": "designed",
+          "is_error": false
+        },
+        {
+          "label": "(C)",
+          "wrong_form": "Leave",
+          "correct_form": "Leaving",
+          "is_error": true
+        }
+      ],
+      "explanation": "(A) 전치사 'than' 뒤에는 동명사(being)가 와야 한다. 'be'는 동사원형으로 전치사의 목적어 역할 불가. → being으로 수정. (B) 'is designed to + 동사원형'은 수동태 구문으로 문법적으로 올바른 표현. 오류 없음. (C) 문장의 주어 역할을 하는 자리이므로 동사원형(Leave)이 아닌 동명사(Leaving)가 와야 한다. → Leaving으로 수정.",
+      "test_point": "전치사 목적어로 동명사 사용 / 동명사 주어"
+    }
+  ]
+}
